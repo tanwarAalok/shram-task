@@ -25,15 +25,6 @@ export const UserProvider = ({ children }) => {
         localStorage.removeItem('user');
     };
 
-    const getUser = async () => {
-        try {
-            const response = await axios.get('/api/user');
-            saveUser(response.data);
-        } catch (error) {
-            console.error('Error fetching user data', error);
-        }
-    };
-
     const updateUser = async (updatedData) => {
         try {
             const response = await axios.put(`${BACKEND_URL}/api/user/${user.username}`, updatedData);
@@ -43,12 +34,8 @@ export const UserProvider = ({ children }) => {
         }
     };
 
-    useEffect(() => {
-        if (!user) getUser();
-    }, []);
-
     return (
-        <UserContext.Provider value={{ user, getUser, updateUser, clearUser, saveUser }}>
+        <UserContext.Provider value={{ user, updateUser, clearUser, saveUser }}>
             {children}
         </UserContext.Provider>
     );
