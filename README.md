@@ -10,5 +10,8 @@ Using React.js, Express.js, MongoDB
 ### Game Page
 ![image](https://github.com/user-attachments/assets/e485eff4-a017-453d-a8b0-5f4f5e37b845)
 
+### LeaderBoard Page
+![image](https://github.com/user-attachments/assets/796aeefe-9892-418b-9f8f-be9172ae55ac)
+
 ### End Page
 ![image](https://github.com/user-attachments/assets/36409bf4-d41a-413c-9e87-4cb89c398478)
